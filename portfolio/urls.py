@@ -26,4 +26,6 @@ urlpatterns = [
     
     # urls of jobs app
     path("", jobs.views.home, name="home")
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
